@@ -15,27 +15,31 @@ Each website (project) can have as many databases and folder paths for backup. B
 ## Install
 
 1.  Clone project with `--recursive` option to recursively clone the [json.sh](https://github.com/rcrowley/json.sh) submodule.
-      > git clone --recursive git@github.com:miranj/backup.git
+      
+      `> git clone --recursive git@github.com:miranj/backup.git`
 
 2.  Create a `config.json` from `config-sample.json` using appropriate config values.
 
 3.  Protect `config.json`.
-      > chmod 600 config.json
+      
+      `> chmod 600 config.json`
 
 4.  For PostgreSQL, a `.pgpass` file must be placed in the user home directory with database usernames and passwords. Refer [PostgreSQL Password File Documentation](http://www.postgresql.org/docs/9.1/static/libpq-pgpass.html).
 
 5.  For MysQL, a `my.cnf` file *may be* used to provide database usernames and passwords. Refer [MySQL Option File Documentation](https://dev.mysql.com/doc/refman/5.1/en/option-files.html).
 
 6.  Set up a cron job to periodically run the script `backup.sh`
+        
         Examples:
         > # 3AM everyday
         > 0 3 * * * <path_to_backup.sh>
-        
+        >
         > # Every 30 minutes
         > 0/30 * * * * <path_to_backup.sh>
       
 7.  To delete old backups specify a lifetime in the config file, and set up a cron job to periodically run the script `cleanup.sh`
-        Examples:
+        
+        Example:
         > # 3AM every Saturday
         > 0 3 * * 6 <path_to_cleanup.sh>
 
