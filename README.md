@@ -1,9 +1,9 @@
 backup
 ======
 
-Shell script to backup (and restore) web servers hosting multiple websites.
+Shell script to backup and restore databases and files on web servers.
 
-Each website (project) can have as many databases and folder paths for backup. Backup is also copied to a remote location (over SCP/SSH).
+The backup script uses a configuration file where each website is set as a project and can have multiple databases and folder paths for backup. Each backup file is also copied over to a remote location (over SCP/SSH).
 
 *Currently works with MySQL and PostgreSQL databases.*
 
