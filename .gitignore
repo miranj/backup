@@ -1,0 +1,16 @@
+# OS or Editor files
+\.DS_Store
+\Thumbs\.db
+
+
+# Temporary files/folders for debugging/testing
+files/
+debug\.txt
+tests/backup/
+tests/restore/
+tests/temp/
+
+
+# Config files
+config.json
+tests/config/

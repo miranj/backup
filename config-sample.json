@@ -1,0 +1,28 @@
+{
+    "root"      : "<absolute_path_to_backup_root_folder>"
+  , "remote"      : {
+      "host"      : "<username@host-ip> or <hoststring>"
+    , "path"      : "<path_to_backup_folder_relative_to_home>"
+  }
+  , "lifetime"  : <number_of_days>
+  , "projects": [
+      {
+        "name": "<give_project_a_name>"
+      , "files": [
+          {
+            "name": "<give_file_or_folder_a_name>"
+          , "path": "<path_to_file_or_folder>"
+        }
+      ]
+      , "db": [
+          {
+            "type": "<which_database>"
+          , "name": "<database_name>"
+          , "args": "<extra_args_to_be_passed_to_db_dump_command>"
+          , "user": "<username>"
+          , "password": "<password>"
+        }
+      ]
+    }
+  ]
+}

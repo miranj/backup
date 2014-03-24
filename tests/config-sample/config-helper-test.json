@@ -1,0 +1,19 @@
+{
+    "root"        : "tests/backup"
+  , "lifetime"    : 30
+  , "projects": [
+      {
+        "name": "project1"
+      , "files": [
+          {
+            "name": "f"
+          , "path": "tests/files/project1/file"
+        }
+        , {
+            "name": "d"
+          , "path": "tests/files/project1/directory"
+        }
+      ]
+    }
+  ]
+}

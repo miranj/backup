@@ -1,0 +1,43 @@
+{
+    "root"        : "tests/backup"
+  , "lifetime"    : 30
+  , "projects": [
+      {
+        "name": "project1"
+      , "files": [
+          {
+            "name": "f"
+          , "path": "tests/files/project1/file"
+        }
+        , {
+            "name": "d"
+          , "path": "tests/files/project1/directory"
+        }
+      ]
+    }
+    , {
+        "name": "mysql_project"
+      , "db": [
+          {
+            "type": "mysql"
+          , "name": "<database_name>"
+          , "args": "<extra_args_to_be_passed_to_db_dump_command>"
+          , "user": "<username>"
+          , "password": "<password>"
+        }
+      ]
+    }
+    , {
+        "name": "postgresql_project"
+      , "db": [
+          {
+            "type": "postgresql"
+          , "name": "<database_name>"
+          , "args": "<extra_args_to_be_passed_to_db_dump_command>"
+          , "user": "<username>"
+          , "password": "<password>"
+        }
+      ]
+    }
+  ]
+}
