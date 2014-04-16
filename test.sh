@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Run roundup tests for miranj backup.
 # Roundup usage reference project: https://github.com/holman/spark

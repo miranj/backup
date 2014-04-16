@@ -1,7 +1,7 @@
 backup
 ======
 
-Shell script to backup and restore databases and files on web servers.
+Bash script to backup and restore databases and files on web servers.
 
 The backup script uses a configuration file where each website is set as a project and can have multiple databases and folder paths for backup. Each backup file is also copied over to a remote location (over SCP/SSH).
 
