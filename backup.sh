@@ -3,7 +3,7 @@
 #
 #         FILE:  backup.sh
 #
-#        USAGE:  backup.sh [project_name]
+#        USAGE:  backup.sh [-c|--config=<path_to_config.json>] [project_name]
 #
 #  DESCRIPTION:  Backs up all projects in the config file.
 #                Optional parameter `project_name` used to backup a single project.
@@ -15,6 +15,7 @@
 
 SCRIPT_BASE=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
+. $SCRIPT_BASE/get-arguments.sh
 . $SCRIPT_BASE/config-helper.sh
 
 #===  FUNCTION  ===================================================================================

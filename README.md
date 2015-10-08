@@ -32,24 +32,24 @@ The backup script uses a configuration file where each website is set as a proje
         
         Examples:
         > # 3AM everyday
-        > 0 3 * * * <path_to_backup.sh>
+        > 0 3 * * * <path_to_backup.sh> [--config=<path_to_config.json>]
         >
         > # Every 30 minutes
-        > 0/30 * * * * <path_to_backup.sh>
+        > 0/30 * * * * <path_to_backup.sh> [--config=<path_to_config.json>]
       
 7.  To delete old backups specify a lifetime in the config file, and set up a cron job to periodically run the script `cleanup.sh`
         
         Example:
         > # 3AM every Saturday
-        > 0 3 * * 6 <path_to_cleanup.sh>
+        > 0 3 * * 6 <path_to_cleanup.sh> [--config=<path_to_config.json>]
 
 ## Usage
 
-- `./backup.sh` backs up all projects
-- `./backup.sh <project-name>` backs up a single project
-- `./restore.sh <project-name> <backup-file-path>` restores the project
-- `./cleanup.sh` deletes all local backups that are older than the lifetime (as set in config file)
-- `./cleanup.sh <project-name>` deletes all local backups of a single project that are older than the lifetime (as set in config file)
+- `./backup.sh [--config=<path_to_config.json>]` backs up all projects
+- `./backup.sh  [--config=<path_to_config.json>] <project-name>` backs up a single project
+- `./restore.sh  [--config=<path_to_config.json>] <project-name> <backup-file-path>` restores the project
+- `./cleanup.sh [--config=<path_to_config.json>]` deletes all local backups that are older than the lifetime (as set in config file)
+- `./cleanup.sh  [--config=<path_to_config.json>] <project-name>` deletes all local backups of a single project that are older than the lifetime (as set in config file)
 
 
 ## Tests

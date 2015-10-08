@@ -3,7 +3,7 @@
 #
 #         FILE:  cleanup.sh
 #
-#        USAGE:  cleanup.sh [project_name]
+#        USAGE:  cleanup.sh [-c|--config=<path_to_config.json>] [project_name]
 #
 #  DESCRIPTION:  Cleans up (deletes) aged project backups i.g. age > `LIFETIME` in config file.
 #                Optional parameters `project_name` used to cleanup backups for a single project.
@@ -12,6 +12,7 @@
 
 SCRIPT_BASE=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
+. $SCRIPT_BASE/get-arguments.sh
 . $SCRIPT_BASE/config-helper.sh
 
 #===  FUNCTION  ===================================================================================

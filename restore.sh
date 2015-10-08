@@ -3,7 +3,7 @@
 #
 #         FILE:  restore.sh
 #
-#        USAGE:  restore.sh project_name backup_file
+#        USAGE:  restore.sh [-c|--config=<path_to_config.json>] project_name backup_file
 #
 #  DESCRIPTION:  Restores all files and database from a backup file.
 #
@@ -11,6 +11,7 @@
 
 SCRIPT_BASE=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
+. $SCRIPT_BASE/get-arguments.sh
 . $SCRIPT_BASE/config-helper.sh
 
 #===  FUNCTION  ===================================================================================
